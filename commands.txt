@@ -1,0 +1,5 @@
+Comando para instlar o TS por projeto 
+    - npm install -D typescript
+
+Comando lib code runner 
+    npm - ts-node -D
