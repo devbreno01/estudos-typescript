@@ -3,4 +3,5 @@
 - Ferrramente de análise de codigo estático que identifica e reporta problemas de padrão em código Jvascript/ Typescript 
 - Reforça padrões de código, melhora qualidade de código e capta possíveis erros 
 
-
+## Prettier 
+    - formatador de código que impõe um estilo consistente em todo o projeto, reimprimindo automaticamente o código com suas próprias regras.
