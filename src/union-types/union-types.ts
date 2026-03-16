@@ -1,7 +1,7 @@
 /*
   Utilizamos quando tempos mais de um tipo de retorno,parametro ou var
 */
-
+// | 
 function add(a: number | string  ,b:number | string  )
 {
    if(typeof a ==='number' && typeof b ==='number')
