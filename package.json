@@ -11,15 +11,19 @@
   "description": "",
   "devDependencies": {
     "@types/prompt-sync": "^4.2.3",
+    "cli": "^1.0.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2"
   },
   "dependencies": {
     "-": "^0.0.1",
     "D": "^1.0.0",
     "prompt-sync": "^4.2.0",
+    "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2"
   }
 }

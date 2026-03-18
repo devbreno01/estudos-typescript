@@ -1,5 +1,9 @@
-Comando para instlar o TS por projeto 
+Comando para instlar o TS por projeto
     - npm install -D typescript
 
-Comando lib code runner 
+Comando lib code runner
     npm - ts-node -D
+
+Bundler:
+Unir os arquivos compilados da pasta dist e 1 ou 2 arquivos
+npm i ts-loader webpack webpack cli --save-dev
