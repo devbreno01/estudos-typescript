@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/exercicio-front/form-control.ts"
@@ -7,7 +8,29 @@
   \*********************************************/
 () {
 
-throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\nError: TypeScript emitted no output for C:\\Users\\breno\\Documents\\codigo2\\estudos-typescript\\src\\exercicio-front\\form-control.ts.\n    at makeSourceMapAndFinish (C:\\Users\\breno\\Documents\\codigo2\\estudos-typescript\\node_modules\\ts-loader\\dist\\index.js:55:18)\n    at successLoader (C:\\Users\\breno\\Documents\\codigo2\\estudos-typescript\\node_modules\\ts-loader\\dist\\index.js:42:5)\n    at Object.loader (C:\\Users\\breno\\Documents\\codigo2\\estudos-typescript\\node_modules\\ts-loader\\dist\\index.js:23:5)");
+
+var _this = this;
+var SHOW_ERROR_MESSAGE = 'show_error_message';
+var form = document.querySelector('.form');
+var username = document.querySelector('.username');
+var email = document.querySelector('.email');
+var password = document.querySelector('.password');
+var password2 = document.querySelector('.password2');
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("Enviando");
+    hideErrorMessages(_this);
+});
+function hideErrorMessages(form) { }
+function showErrorMessage(input, msg) {
+    var formFields = input.parentElement;
+    var errorMessage = formFields.querySelector(".error-message");
+    errorMessage.innerText = msg;
+    formFields.classList.add(SHOW_ERROR_MESSAGE);
+}
+showErrorMessage(username, 'MENSAGEM');
+console.log("testee");
+
 
 /***/ }
 
@@ -37,7 +60,7 @@ throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\n
 /******/ 			e.code = 'MODULE_NOT_FOUND';
 /******/ 			throw e;
 /******/ 		}
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -45,9 +68,8 @@ throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\n
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 var exports = __webpack_exports__;
 /*!************************************************!*\
   !*** ./src/exercicio-front/exercicio-front.ts ***!
@@ -55,7 +77,7 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __webpack_require__(/*! ./form-control */ "./src/exercicio-front/form-control.ts");
-console.log('testee');
+console.log('testee frontendd');
 
 })();
 
