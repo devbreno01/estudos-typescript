@@ -9,7 +9,6 @@
 () {
 
 
-var _this = this;
 var SHOW_ERROR_MESSAGE = 'show_error_message';
 var form = document.querySelector('.form');
 var username = document.querySelector('.username');
@@ -19,12 +18,31 @@ var password2 = document.querySelector('.password2');
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log("Enviando");
-    hideErrorMessages(_this);
+    var formElement = event.currentTarget;
+    hideErrorMessages(formElement);
+    checkForEmptyFields(username, email, password, password2);
 });
-function hideErrorMessages(form) { }
+function checkForEmptyFields() {
+    var inputs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        inputs[_i] = arguments[_i];
+    }
+    console.log('Enrty checkForEmptyFields');
+    inputs.forEach(function (input) {
+        if (!input.value) {
+            showErrorMessage(input, 'Campo não pode ficar vazio');
+        }
+    });
+}
+function hideErrorMessages(form) {
+    form
+        .querySelectorAll("." + SHOW_ERROR_MESSAGE)
+        .forEach(function (item) { return item.classList.remove(SHOW_ERROR_MESSAGE); });
+}
 function showErrorMessage(input, msg) {
     var formFields = input.parentElement;
-    var errorMessage = formFields.querySelector(".error-message");
+    console.log(formFields);
+    var errorMessage = formFields.querySelector(".show-error-message");
     errorMessage.innerText = msg;
     formFields.classList.add(SHOW_ERROR_MESSAGE);
 }
@@ -60,7 +78,7 @@ console.log("testee");
 /******/ 			e.code = 'MODULE_NOT_FOUND';
 /******/ 			throw e;
 /******/ 		}
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
